@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    background-image: linear-gradient(135deg,#6f6a6a,#474A51);
+    padding: 60px 120px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;/*Serve para permitir a quebra de linha*/
+}
+
+footer > div{
+    flex: 1;
+}
+
+footer > div:last-child{
+    flex: initial;
+    width: 100%;
+    text-align: right;
+}
+
+footer h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer p{
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+footer div:first-child ul {
+    display: flex;
+    gap: 16px;
+}
+
+footer div:first-child ul a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-size: 20px;
+    display: block;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer div:first-child ul a::after{
+    content: "";
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    left: -50px;
+    background-color: #FFFFFF50;
+    transform: skewX(35deg);
+    transform-origin: top left;
+}
+
+footer div:first-child ul a:hover::after{
+    left: 60px;
+    transition-duration: 400ms;
+}
+
+footer h5{
+    font-size: 18px;
+    color: #FFF;
+    margin-bottom: 16px;
+}
+
+footer > div:nth-child(2) a{
+    line-height: 30px;
+    color: #FFFFFF50;
+    transition-duration: 300ms;
+    display: block;
+}
+
+footer > div:nth-child(2) a:hover{
+    color: #FFFFFF;
+    padding-left: 16px;
+}
+
+footer .newsletter{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer .newsletter input{
+    width: 100%;
+    height: 60px;
+    padding-left: 10px;
+    border: 2px solid #FFFFFF50;
+    border-radius: 5px;
+    background-color: transparent;
+    transition-duration: 200ms;
+    z-index: 1;
+    color: #FFF;
+}
+
+footer .newsletter input:focus{
+    outline: none;
+    border-color: #FFF;
+}
+
+footer .newsletter button{
+    background-color: transparent;
+    width: 50px;
+    cursor: pointer;
+}
+
+footer .newsletter i{
+    font-size: 24px;
+    color: #FFF;
+}
+
+footer .newsletter span{
+    position: absolute;
+    font-size: 12px;
+    color: #FFFFFF50;
+    left: 18px;
+    transition-duration: 200ms;
+}
+
+footer .newsletter input:focus + span{
+    transform: translateY(-16px);
+    font-size: 12px;
+    left: 6px;
+    color: #FFF;
+}
+
+footer h6{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFF;
+}
+
+header{
+    border: 1px solid blue;
+    line-height: 50px;
+}
+
+main{
+    border: 1px solid red;
+    height: 1000px;
+}
+
+.voltar{
+    width: 50px;
+    height: 50px;
+    background-color: #ffdd00;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.voltar.active{
+    opacity: 1;
+    visibility: visible;
+}
